@@ -37,6 +37,7 @@ require (
 	github.com/hashicorp/go-immutable-radix v1.2.0 // indirect
 	github.com/hashicorp/golang-lru v0.5.4 // indirect
 	github.com/hetznercloud/hcloud-go v1.21.1
+	github.com/huaweicloud/huaweicloud-sdk-go-v3 v0.0.14-beta
 	github.com/influxdata/influxdb v1.8.2
 	github.com/json-iterator/go v1.1.10
 	github.com/miekg/dns v1.1.31
