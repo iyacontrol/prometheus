@@ -155,7 +155,7 @@ func (d *Discovery) refresh(ctx context.Context) ([]*targetgroup.Group, error) {
 
 		resp, err := client.ListServersDetails(request)
 		if err != nil {
-
+			continue
 		}
 
 		servers = append(servers, *resp.Servers...)
@@ -166,7 +166,7 @@ func (d *Discovery) refresh(ctx context.Context) ([]*targetgroup.Group, error) {
 		var ip string
 		for _, addresses := range server.Addresses {
 			for _, address := range addresses {
-				if address.Version == "4" {
+				if address.Version == "4" && ip == "" {
 					ip = address.Addr
 				}
 			}
